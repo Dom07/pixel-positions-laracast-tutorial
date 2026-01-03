@@ -4,7 +4,9 @@
     <div class="self-start text-sm">{{ $job->employer->name }}</div>
 
     <div class="py-8">
-        <h3 class="group-hover:text-blue-600 transition-colors duration-300 text-xl font-bold">{{  $job->title}}</h3>
+        <h3 class="group-hover:text-blue-600 transition-colors duration-300 text-xl font-bold">
+            <a href="{{  $job->url }}" target="_blank">{{  $job->title }}</a>
+        </h3>
         <p class="text-sm mt-4">{{ $job->schedule }} - From {{ $job->salary }}</p>
     </div>
 
@@ -15,6 +17,6 @@
             @endforeach
         </div>
 
-        <img src="https://placehold.co/42x42" alt="" class="rounded-xl">
+        <img src="{{ asset($job->employer->logo) }}" alt="" class="rounded-xl">
     </div>
 </div>
