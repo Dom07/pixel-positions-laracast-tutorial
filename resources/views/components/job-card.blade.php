@@ -17,6 +17,6 @@
             @endforeach
         </div>
 
-        <img src="{{ asset($job->employer->logo) }}" alt="" class="rounded-xl">
+        <img src="{{ asset('storage/' . $job->employer->logo) }}" alt="" class="rounded-xl" width="{{ 90 }}">
     </div>
 </div>
